@@ -10,7 +10,7 @@ export const Header = () => {
         <div className=''>
         <h1 className="font-bold text-sm sm:text-sm flex flex-wrap">
             <span className='text-white text-3xl'>Luxe</span>
-            <span className='text-red-600 text-3xl'>Wheels</span>
+            <span className='text-blue-700 text-3xl'>Wheels</span>
         </h1>
         </div>
         </Link>
