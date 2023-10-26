@@ -7,7 +7,6 @@ export default function Login() {
     <h1 className='text-3xl text-center font-sembold my-6 text-white'>Login</h1>
 
     <form className='flex flex-col gap-4'>
-        <input type="text" placeholder='username' className='border-blue-900 border-2 p-3 rounded-lg bg-black text-white' id='username'/>
         <input type="email" placeholder='email' className='border-blue-900 border-2 p-3 rounded-lg bg-black text-white' id='email'/>
         <input type="password" placeholder='password' className='border-blue-900 border-2 p-3 rounded-lg bg-black text-white' id='password'/>
 
