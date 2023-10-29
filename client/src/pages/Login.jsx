@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { signInStart, signInSuccess, signInFailure } from '../redux/user/userSlice.js'
+import GoogleAuth from '../components/GoogleAuth.jsx';
 
 export default function Login() {
   const [formData, setFormData] = useState({});
@@ -47,13 +48,14 @@ export default function Login() {
 
             <button 
             disable={loading} 
-            className='bg-blue-700 text-white py-2 rounded-lg hover:opacity-80 disabled: opacity-80'> 
+            className='bg-blue-700 text-white py-2 rounded-lg hover:opacity-80 disabled: opacity-80 w-52 mx-auto'> 
             {loading ? 'Loading...' : 'Login'}
             
             </button>
+            <GoogleAuth/>
         </form>
         <div className='flex gap-2 mt-4'>
-            <p>Dont have an account?</p>
+            <p className='text-white'>Dont have an account?</p>
             <Link to={"/signup"}>
                 <span className='text-red-500 hover:underline'>Sign Up</span>
             </Link>
