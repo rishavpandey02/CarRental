@@ -7,6 +7,7 @@ import listingRouter from './routes/car-listing-route.js';
 import cookieParser from 'cookie-parser';
 dotenv.config();
 
+const PORT = process.env.PORT
 mongoose.connect("mongodb+srv://rishavpandey:Brssp123@mern-carrental.wclvith.mongodb.net/?retryWrites=true&w=majority")
 .then(() => {
     console.log('Connected to MongoDB');
@@ -38,5 +39,5 @@ app.use((err, req, res, next) => {
 });
 
 app.listen(3001, () => {
-    console.log('Server is running on port 3001')
+    console.log('Server is running on port process.env.PORT')
     });
