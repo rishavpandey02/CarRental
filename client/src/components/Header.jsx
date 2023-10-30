@@ -7,7 +7,7 @@ export const Header = () => {
   const {currentUser} = useSelector(state => state.user)
   return (
     <header className='bg-slate-800'>
-        <div className='flex justify-between items-center max-w-6xl mx-auto p-3'>
+        <div className='flex justify-between items-center max-w-12xl mx-auto p-3'>
         <Link to="/">
         <div className=''>
         <h1 className="font-bold text-sm sm:text-sm flex flex-wrap">
