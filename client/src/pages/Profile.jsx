@@ -8,7 +8,7 @@ export default function Profile() {
   const dispatch = useDispatch()
   const { currentUser } = useSelector((state) => state.user);
   const [showListingError, setShowListingError] = useState(false);
- const [ userListings, setUserListingsError] = useState([]);
+ const [ userListings, setUserListings] = useState([]);
 
   const handleSignOut = async () => {
     try {
@@ -35,11 +35,30 @@ export default function Profile() {
         return;
       }
 
-      setUserListingsError(data);
+      setUserListings(data);
     } catch (error) {
       setShowListingError(true);
     }
   }
+
+  const handleListingDelete = async (listingId) => {
+    try {
+      const res = await fetch(`/api/listing/delete/${listingId}`, {
+        method: 'DELETE',
+      });
+      const data = await res.json();
+      if (data.success === false) {
+        console.log(data.message);
+        return;
+      }
+
+      setUserListings((prev) =>
+        prev.filter((listing) => listing._id !== listingId)
+      );
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
   return (
     <div>
       <h1 className='text-4xl font-bold text-center text-white my-6'>Welcome to your Profile</h1>
@@ -61,14 +80,16 @@ export default function Profile() {
           </Link>
 
           <div className='flex flex-col items-center gap-2'>
-            <button className='text-red-700'>DELETE</button>
-            <button className='text-green-500'>EDIT</button>
+            <button onClick={() => handleListingDelete(listing._id)} className='text-red-700 hover:bg-red-700 hover:text-white hover:rounded-lg'>DELETE</button>
+            <Link to={`/update-listing/${listing._id}`}>
+            <button className='text-green-500 hover:bg-green-500 hover:text-white hover:rounded-lg'>EDIT</button>
+            </Link>
           </div>
         </div>
       ))  
       }
 
-        <span onClick={handleSignOut} className="text-red-700 font-bold cursor-pointer text-center mt-4">Sign Out</span>
+        <span onClick={handleSignOut} className="text-red-700 font-bold cursor-pointer text-center mt-4 hover:underline">Sign Out</span>
       </div>
       
     </div>
