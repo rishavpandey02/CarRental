@@ -54,7 +54,7 @@ export default function Login() {
             </button>
             <GoogleAuth/>
         </form>
-        <div className='flex gap-2 mt-4'>
+        <div className='flex gap-2 mt-4 mx-auto'>
             <p className='text-white'>Dont have an account?</p>
             <Link to={"/signup"}>
                 <span className='text-red-500 hover:underline'>Sign Up</span>

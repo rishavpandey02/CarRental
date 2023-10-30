@@ -29,6 +29,6 @@ export default function GoogleAuth() {
         }
     }
   return (
-    <button onClick={handleGoogleClick} type='button' className='bg-white p-2 rounded-lg font-semibold text-blue-800 hover:opacity-95'>SIGN IN WITH GOOGLE</button>
+    <button onClick={handleGoogleClick} type='button' className='bg-white p-2 rounded-lg font-semibold text-blue-800 hover:opacity-95 w-52 mx-auto'>SIGN IN WITH GOOGLE</button>
   )
 }
