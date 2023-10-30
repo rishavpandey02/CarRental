@@ -22,7 +22,7 @@ const carListingSchema = new mongoose.Schema(
             required: true,
         },
 
-        discountedPrice: {
+        discountPrice: {
             type: Number,
             required: true,
         },
