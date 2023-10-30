@@ -23,12 +23,11 @@ export default function Profile() {
   return (
     <div>
       <h1 className='text-4xl font-bold text-center text-white my-6'>Welcome to your Profile</h1>
-      <Link className='bg-green-500 text-white p-3 rounded-lg text-center hover:opacity-95' to={"/create-listing"}>
+      <div className="flex flex-col justify-center mt-8 p-4 items-center">
+      <Link className='bg-green-500 text-white p-3 rounded-lg text-center hover:opacity-95 w-64' to={"/create-listing"}>
       Create Car Listing
       </Link>
-      
-      <div className="flex justify-center mt-8">
-        <span onClick={handleSignOut} className="text-red-700 font-bold cursor-pointer">Sign Out</span>
+        <span onClick={handleSignOut} className="text-red-700 font-bold cursor-pointer text-center mt-4">Sign Out</span>
       </div>
       
     </div>
