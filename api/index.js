@@ -7,7 +7,7 @@ import listingRouter from './routes/car-listing-route.js';
 import cookieParser from 'cookie-parser';
 dotenv.config();
 
-mongoose.connect(process.env.MONGODB_URI || process.env.MONGO)
+mongoose.connect(process.env.MONGODB_URI)
 .then(() => {
     console.log('Connected to MongoDB');
 }).catch((err) => {
