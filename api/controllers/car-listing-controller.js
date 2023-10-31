@@ -62,3 +62,28 @@ export const deleteListing = async (req, res, next) => {
       next(error);
     }
   };
+
+  export const getListings = async (req, res, next) => {
+    try {
+      const limit = parseInt(req.query.limit) || 9;
+      const startIndex = parseInt(req.query.startIndex) || 0;
+      let offer = req.query.offer;
+
+      if (offer === undefined || offer === 'false')
+      offer = {$in: [true, false]};
+
+      let transmission = req.query.transmission;
+
+      if (transmission === undefined || transmission === 'all') {
+        transmission = { $in: ['automatic', 'manual']};
+      }
+      const listings = await Listing.find({ offer, transmission }).limit(limit).skip(startIndex);
+
+      res.json(listings);
+
+     
+
+    } catch (error) {
+      next(error)
+    }
+  }

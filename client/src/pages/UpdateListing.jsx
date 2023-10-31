@@ -146,7 +146,7 @@ export default function CreatingListing() {
     <form onSubmit={handleSubmit} className='flex flex-col sm:flex-row gap-4'>
         <div className='flex flex-col flex-1'>
             <input onChange={handleChange} value={formData.name} type='text' placeholder="Name" id='name' className='m-4 border rounded-lg p-3' required/>
-            <input onChange={handleChange} value={formData.description} type='text' placeholder="Description" id='description' className='m-4 border rounded-lg p-3' required/>
+            <textarea onChange={handleChange} value={formData.description} type='text' placeholder="Description... Add Email at End" id='description' className='m-4 border rounded-lg p-3' required/>
             <input onChange={handleChange} value={formData.address} type='text' placeholder="Address" id='address' className='m-4 border rounded-lg p-3' required/>
             <div className='flex gap-10 flex-wrap mt-4'>
                 <div className='flex gap-2 '>

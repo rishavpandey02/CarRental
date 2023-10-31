@@ -27,6 +27,11 @@ const carListingSchema = new mongoose.Schema(
             required: true,
         },
 
+        offer: {
+            type: Boolean,
+            required: true,
+        },
+
         seats: {
             type: Number,
             required: true,

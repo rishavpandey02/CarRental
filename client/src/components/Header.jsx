@@ -16,10 +16,7 @@ export const Header = () => {
         </h1>
         </div>
         </Link>
-        <form className='flex items-center rounded-lg p-2 bg-white'>
-            <input type="text" placeholder='Search...' className='bg-transparent p-1 focus:outline-none w-24 sm:w-64' />
-            <FaSearch className='text-slate-600'/>
-        </form>
+        
         <ul className='flex gap-4 text-white'>
             <Link to="/">
             <li className='hidden sm:inline hover:underline'>Home</li>
