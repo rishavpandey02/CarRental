@@ -9,7 +9,7 @@ import { Header } from './components/Header'
 import PrivateRoute from './components/PrivateRoute'
 import CreatingListing from './pages/CreatingListing'
 import UpdateListing from './pages/UpdateListing'
-import Listing from './pages/listing'
+import Listing from './pages/Listing'
 
 
 export default function App() {
