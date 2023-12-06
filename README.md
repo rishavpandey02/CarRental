@@ -2,6 +2,16 @@
 
 Welcome to the `LuxeWheels` README document! `LuxeWheels` is a sophisticated car rental platform built using the MERN stack (MongoDB, Express.js, React.js, and Node.js). This platform offers a streamlined car rental experience, enabling users to browse, list, and rent luxury vehicles with ease.
 
+## ScreenShots
+![image](https://github.com/rishavpandey02/CarRental/assets/133511202/bcb7b925-779c-4863-95c7-c848cc6158e7)
+![image](https://github.com/rishavpandey02/CarRental/assets/133511202/70530f8a-a812-4cd8-97e6-d8e17031091e)
+![image](https://github.com/rishavpandey02/CarRental/assets/133511202/31ded3e1-67c1-4319-841a-464006b2d861)
+![image](https://github.com/rishavpandey02/CarRental/assets/133511202/0e76c4e5-b90a-4841-ab0c-321e93eda3a4)
+![image](https://github.com/rishavpandey02/CarRental/assets/133511202/d27aa85f-6595-4720-bde4-faf012c16281)
+![image](https://github.com/rishavpandey02/CarRental/assets/133511202/919736a6-3447-4031-bbcd-90a00638fedf)
+
+
+
 ## Table of Contents
 
 - [Introduction](#introduction)
